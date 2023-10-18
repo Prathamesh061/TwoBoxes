@@ -90,14 +90,18 @@ const TwoBoxesType2 = () => {
           <button
             onClick={moveToLeft}
             disabled={selectedRightItems.length === 0}
-            className="bg-red-500 text-white rounded-full p-2 mt-2"
+            className={` text-white rounded-full p-2 mt-2 ${
+              selectedRightItems.length === 0 ? "bg-gray-400" : "bg-red-500"
+            }`}
           >
             {"<"}
           </button>
           <button
             onClick={moveToRight}
             disabled={selectedLeftItems.length === 0}
-            className="bg-green-500 text-white rounded-full p-2 mt-2"
+            className={` text-white rounded-full p-2 mt-2 ${
+              selectedLeftItems.length === 0 ? "bg-gray-400" : "bg-green-500"
+            }`}
           >
             {">"}
           </button>
